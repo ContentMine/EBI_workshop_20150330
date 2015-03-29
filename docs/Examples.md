@@ -1,0 +1,9 @@
+# Example material
+There is a tutorial for `ami` in https://bitbucket.org/petermr/norma/downloads/tutorial.tar. Untar this ('tar -xvf tutorial.tar`)
+It consists of
+## examples
+This is a directory (`examples`) containing 12 CM directories for clinical trials from BMC
+## examples2
+A directory (`examples2`) containing 1 directory for a PLoSONE article containing both sequences and species.
+## scripts
+
