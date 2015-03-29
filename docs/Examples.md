@@ -4,6 +4,17 @@ It consists of
 ```
 examples		regex			sequenceexample.sh	wordsexample.sh examples2		regexexample.sh		speciesexample.sh
 ```
+
+## contentmine (CM) directories
+
+These directories each hold the material (raw and derived) for a single article. A typical structure is:
+```
+plosjournal.pone.0121780_sequence/
+fulltext.xml	results.json	scholarly.html
+```
+i.e. this directory contains the scraped XML (`fulltext.xml`), the metadata for the scrape (`results.json`) and the `norma`-transformed result (`scholarly.html`) which is what `ami` uses. `ami` results will go directly into this directory,
+henceforce called a `CM` directory.
+
 ## examples
 
 This is a directory (`examples`) containing 12 CM directories for clinical trials from BMC
@@ -18,7 +29,7 @@ http_www.trialsjournal.com_content_16_1_15	 http_www.trialsjournal.com_content_1
 
 ## examples2
 
-A directory (`examples2`) containing 1 directory for a PLoSONE article containing both sequences and species.
+A directory (`examples2`) containing 1 directory for a PLoSONE article (`plosjournal.pone.0121780_sequence`) containing both sequences and species.
 
 ## scripts
 
