@@ -110,13 +110,10 @@ ami2-species --sp.species --context 35 --sp.type binomial binomialsp -q speciest
 
 ```
 ###  `wordsexample.sh`
-```
-#!/bin/sh
 
-rm -rf speciestest
-cp -r examples2 speciestest
-ami2-species --sp.species --context 35 --sp.type binomial binomialsp -q speciestest/plosjournal.pone.0121780_sequence -i scholarly.html --lookup wikipedia
-localhost:tutorial pm286$ more wordsexample.sh 
+This contains several examples:
+help:
+```
 #!/bin/sh
 
 # example 1
@@ -127,7 +124,9 @@ echo help
 echo
 ami2-words
 echo
-
+```
+#### word frequencies:
+```
 # example 1
 # runs ami-words on a small number of files 
 # for tutorials we copy the files to a temporary directory so as not to overwrite them by mistake
@@ -150,6 +149,9 @@ echo
 # and list all the files we have produced
 ls -ltR wordstest/*/results/word/frequencies
 echo
+```
+#### summary frequencies
+```
 rm -rf wordstest/
 cp -R examples/ wordstest
 echo
