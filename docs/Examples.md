@@ -31,12 +31,39 @@ http_www.trialsjournal.com_content_16_1_15	 http_www.trialsjournal.com_content_1
 
 A directory (`examples2`) containing 1 directory for a PLoSONE article (`plosjournal.pone.0121780_sequence`) containing both sequences and species.
 
+## regex
+
+There's a directory of regexes:
+```
+├── regex
+│   ├── agriculture.xml
+│   ├── astrophys.xml
+│   ├── common.xml
+│   ├── commonnew.xml
+│   ├── consort0.xml
+│   ├── ebola.xml
+│   ├── figure.xml
+│   ├── genbank.xml
+│   ├── metadata.xml
+│   ├── pdb.xml
+│   ├── phylotree.xml
+│   ├── publication.xml
+│   └── simpletest.xml
+```
+and a script to run `ami2-regex` which we'll look at later:
+```
+├── regexexample.sh
+```
+
 ## scripts
 
 These scripts can all be run by `sh sequenceexample.sh` or similar. They create local directories (e.g. `sequencetest`)
 with the results.
 
 ###  `regexexample.sh`
+
+runs `ami2-regex` . Some of the script is to output context
+
 ```
 # prints help
 echo "==================regex================"
@@ -56,6 +83,10 @@ echo "results in QSN"
 echo
 ls -ltR regextest/*/results/regex/consort0/
 echo
+```
+but the prime command is
+```
+ami2-regex -q regextest/ --context 25 40 --r.regex regex/consort0.xml 
 ```
 
 ###  `sequenceexample.sh`
